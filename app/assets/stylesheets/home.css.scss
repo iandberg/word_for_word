@@ -1,0 +1,31 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#intro, #home_search {
+
+	width: 350px;
+	height: 400px;
+	padding: 20px;
+	margin-left: 10px;
+//	border: 1px solid black;
+}
+
+#intro {
+
+	border-right: 3px solid black;
+}
+
+#intro ul li {
+
+	margin-left: 40px;
+	list-style-type: circle;
+}
+
+#home_search h1{
+
+	font-size: 30px;
+}
+
+

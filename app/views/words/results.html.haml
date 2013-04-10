@@ -1,0 +1,32 @@
+#subject
+	%h1= @search_subject.subject
+	#subject_lists
+		%p Member of lists:
+		- @list_info.each do |l|
+			%a{:href => '#'}
+				#{l.list_name}
+			,
+#result_tabs
+	%ul
+		%li
+			%a{:href => '#tabs_1'}All
+		%li
+			%a{:href => '#tabs_2'}Songs
+		%li
+			%a{:href => '#tabs_3'}Books
+	#tabs_1
+		%ul
+			- @word_list.each do |w|
+				%li= w.the_word
+	#tabs_2
+		%ul
+			%li songs result
+			%li songs result
+			%li songs result
+			%li songs result
+	#tabs_3
+		%ul
+			%li books result
+			%li books result
+			%li books result
+			%li books result

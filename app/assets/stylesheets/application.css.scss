@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
 */
+@import "compass/reset";
+@import "base";
+
 .brand {
   float: left;
   padding-right: 8px;
@@ -35,3 +38,20 @@ ul.nav li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+
+//Form style
+
+input {
+
+	height: 20px;
+}
+
+
+
+
+
+
+
+
+

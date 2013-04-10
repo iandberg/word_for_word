@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "UnderwoodChampionRegular";
+  src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
+}
+
+/* line 10, ../../app/assets/stylesheets/words.css.scss */
+#subject {
+  width: 300px;
+  height: 50px;
+}
+/* line 15, ../../app/assets/stylesheets/words.css.scss */
+#subject h1 {
+  float: left;
+}
+
+/* line 21, ../../app/assets/stylesheets/words.css.scss */
+#subject_lists {
+  float: right;
+}
+
+/* line 26, ../../app/assets/stylesheets/words.css.scss */
+#result_tabs {
+  width: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/words.css.scss */
+.ui-tabs-anchor {
+  font-family: "UnderwoodChampionRegular";
+}
+
+/* line 39, ../../app/assets/stylesheets/words.css.scss */
+.ui-widget-header {
+  background: #FF5A3C;
+}

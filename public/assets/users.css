@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "UnderwoodChampionRegular";
+  src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
+}
+
+/* line 6, ../../app/assets/stylesheets/users.css.scss */
+h1 {
+  font-family: "UnderwoodChampionRegular";
+}
+
+/* line 11, ../../app/assets/stylesheets/users.css.scss */
+#login_form {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+/* line 16, ../../app/assets/stylesheets/users.css.scss */
+#login_form input {
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 22, ../../app/assets/stylesheets/users.css.scss */
+#login_form label {
+  font-family: "UnderwoodChampionRegular";
+}
+/* line 27, ../../app/assets/stylesheets/users.css.scss */
+#login_form h1 {
+  margin-bottom: 20px;
+}

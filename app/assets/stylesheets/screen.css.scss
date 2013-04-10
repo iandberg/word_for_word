@@ -1,0 +1,66 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+
+body {
+	
+	font-family: "Times";
+	background: $main_color url(images/grunge.png) repeat-x;
+}
+	
+#wrapper {
+
+	width: 900px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: $main_color;
+	@include box-shadow;
+}
+
+h1 {
+
+	font-size: 40px;
+}
+
+.left {
+
+	float: left;
+}
+
+#header {
+
+	@include site_font;
+	margin: 20px;	
+}
+
+
+#nav li {
+
+	float: right;
+	margin-right: 20px;
+	
+	a {
+		color: black;
+		@include hover-link;
+	}
+}
+
+#nav {
+
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+

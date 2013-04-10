@@ -1,0 +1,62 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@font-face {
+  font-family: "UnderwoodChampionRegular";
+  src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
+}
+
+/* line 8, ../../app/assets/stylesheets/screen.css.scss */
+body {
+  font-family: "Times";
+  background: #f1ecd6 url(images/grunge.png) repeat-x;
+}
+
+/* line 14, ../../app/assets/stylesheets/screen.css.scss */
+#wrapper {
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: #f1ecd6;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* line 24, ../../app/assets/stylesheets/screen.css.scss */
+h1 {
+  font-size: 40px;
+}
+
+/* line 29, ../../app/assets/stylesheets/screen.css.scss */
+.left {
+  float: left;
+}
+
+/* line 34, ../../app/assets/stylesheets/screen.css.scss */
+#header {
+  font-family: "UnderwoodChampionRegular";
+  margin: 20px;
+}
+
+/* line 41, ../../app/assets/stylesheets/screen.css.scss */
+#nav li {
+  float: right;
+  margin-right: 20px;
+}
+/* line 46, ../../app/assets/stylesheets/screen.css.scss */
+#nav li a {
+  color: black;
+  text-decoration: none;
+}
+/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#nav li a:hover {
+  text-decoration: underline;
+}
+
+/* line 52, ../../app/assets/stylesheets/screen.css.scss */
+#nav {
+  float: right;
+}
