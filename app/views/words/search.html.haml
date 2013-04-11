@@ -1,0 +1,66 @@
+#search_subject
+	%h1= @search_subject.subject
+#results_area
+	#subject_lists
+		%p Member of lists:
+		- @list_info.each do |l|
+			%a{:href => words_search_path + '?list_subject=' + l.list_name.downcase}
+				= l.list_name
+		%p
+			Current List: 
+			%span#current_list= @current_list_name
+		%p
+			Syllables:
+			%span#syllables
+				= @syllables == ".*" ? "Any" : @syllables
+
+	#result_tabs
+		%ul
+			%li
+				%a{:href => '#tabs_1'}All
+			%li
+				%a{:href => '#tabs_2'}Songs
+			%li
+				%a{:href => '#tabs_3'}Books
+		#tabs_1.results_panel
+			%ul
+				- @word_list.each do |w|
+					%li
+						%a{:href => words_path + '/search?subject=' + w.the_word.downcase}= w.the_word
+
+		#tabs_2.results_panel
+			%ul
+				- @word_list.each do |w|
+					- if w.type == 'song'
+						%li
+							%a{:href => words_search_path + '?subject=' + w.the_word.downcase}= w.the_word
+		#tabs_3.results_panel
+			%ul
+				%li books result
+				%li books result
+				%li books result
+				%li books result
+%img{:id => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
+#search_area
+	%form{:id => 'new_search', :action => words_search_path, :method => 'post'}
+		%p Find words associated with:
+		%input{:name => 'subject', :type => 'text', :placeholder => 'word'}
+		%p that have
+		%input{:name => 'syllables', :type => 'text', :size => '1', :placeholder => '#'}
+		%p syllables
+		%input{:type => 'submit'}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

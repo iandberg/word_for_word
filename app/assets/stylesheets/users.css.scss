@@ -8,7 +8,7 @@ h1 {
 	@include site_font;
 }
 
-#login_form {
+#login_form, #register_form {
 	
 	width: 200px;
 	@include centered;

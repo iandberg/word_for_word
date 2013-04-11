@@ -4,31 +4,89 @@
 }
 
 /* line 10, ../../app/assets/stylesheets/words.css.scss */
-#subject {
-  width: 300px;
-  height: 50px;
-}
-/* line 15, ../../app/assets/stylesheets/words.css.scss */
-#subject h1 {
+#results_area {
+  width: 400px;
+  margin-right: 30px;
   float: left;
 }
 
-/* line 21, ../../app/assets/stylesheets/words.css.scss */
+/* line 17, ../../app/assets/stylesheets/words.css.scss */
+#search_subject {
+  height: 50px;
+}
+/* line 22, ../../app/assets/stylesheets/words.css.scss */
+#search_subject h1 {
+  margin-right: 30px;
+}
+
+/* line 28, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists {
-  float: right;
+  margin-bottom: 20px;
+}
+/* line 32, ../../app/assets/stylesheets/words.css.scss */
+#subject_lists p {
+  margin: 5px 0px;
+}
+/* line 36, ../../app/assets/stylesheets/words.css.scss */
+#subject_lists a {
+  color: black;
+  font-family: "UnderwoodChampionRegular";
+  text-decoration: none;
+}
+/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#subject_lists a:hover {
+  text-decoration: underline;
+}
+/* line 41, ../../app/assets/stylesheets/words.css.scss */
+#subject_lists a:link {
+  color: black;
+}
+/* line 47, ../../app/assets/stylesheets/words.css.scss */
+#subject_lists #current_list, #subject_lists #syllables {
+  font-family: "UnderwoodChampionRegular";
 }
 
-/* line 26, ../../app/assets/stylesheets/words.css.scss */
+/* line 54, ../../app/assets/stylesheets/words.css.scss */
 #result_tabs {
-  width: 400px;
+  height: 450px;
+  background-color: #f1ecd6;
 }
 
-/* line 34, ../../app/assets/stylesheets/words.css.scss */
+/* line 72, ../../app/assets/stylesheets/words.css.scss */
+.results_panel ul li {
+  font-size: .8em;
+  line-height: 1.5em;
+}
+/* line 77, ../../app/assets/stylesheets/words.css.scss */
+.results_panel ul li a {
+  text-decoration: none;
+}
+/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+.results_panel ul li a:hover {
+  text-decoration: underline;
+}
+
+/* line 81, ../../app/assets/stylesheets/words.css.scss */
 .ui-tabs-anchor {
   font-family: "UnderwoodChampionRegular";
 }
 
-/* line 39, ../../app/assets/stylesheets/words.css.scss */
-.ui-widget-header {
-  background: #FF5A3C;
+/* line 87, ../../app/assets/stylesheets/words.css.scss */
+#divider {
+  float: left;
+}
+
+/* line 93, ../../app/assets/stylesheets/words.css.scss */
+#search_area {
+  width: 275px;
+  height: 400px;
+  margin: 60px;
+  padding: 20px;
+  float: left;
+  border: 3px solid black;
+}
+/* line 102, ../../app/assets/stylesheets/words.css.scss */
+#search_area p {
+  margin-bottom: 10px;
+  font-family: "UnderwoodChampionRegular";
 }

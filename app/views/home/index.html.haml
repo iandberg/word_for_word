@@ -9,6 +9,7 @@
 
 #home_search.left
 	%h1 Find words associated with:
-	%form{:method => 'post', :action => words_results_path}
-		%input{:name => 'subject'}
+	%form{:method => 'post', :action => words_search_path}
+		%input{:name => 'subject', :type => 'text'}
+		%input{:name => 'syllables', :value => '', :type => 'hidden'}
 		%button{:type => 'submit', :value => 'Go'}Go

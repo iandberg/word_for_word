@@ -9,21 +9,21 @@ h1 {
 }
 
 /* line 11, ../../app/assets/stylesheets/users.css.scss */
-#login_form {
+#login_form, #register_form {
   width: 200px;
   margin: 0 auto;
   display: block;
 }
 /* line 16, ../../app/assets/stylesheets/users.css.scss */
-#login_form input {
+#login_form input, #register_form input {
   display: block;
   margin-bottom: 20px;
 }
 /* line 22, ../../app/assets/stylesheets/users.css.scss */
-#login_form label {
+#login_form label, #register_form label {
   font-family: "UnderwoodChampionRegular";
 }
 /* line 27, ../../app/assets/stylesheets/users.css.scss */
-#login_form h1 {
+#login_form h1, #register_form h1 {
   margin-bottom: 20px;
 }
