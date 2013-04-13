@@ -34,14 +34,8 @@
 	}
 	
 	a {
-		color: black;
 		@include site_font;
-		@include hover-link;
-		
-		&:link {
-			
-			color: black;	
-		}
+		@include link_highlight; 
 	}
 
 	#current_list, #syllables {
@@ -74,7 +68,9 @@
 		font-size: .8em;
 		line-height: 1.5em;
 		
-		a { @include hover-link; }
+		a { 
+			@include link_highlight; 
+		}
 	}
 }
 
@@ -84,7 +80,7 @@
 }
 
 
-#divider {
+.divider {
 
 	float: left;
 }
@@ -98,15 +94,76 @@
 	padding: 20px;
 	float: left;
 	border: 3px solid black;
+	font-size: 16px;	
 	
 	p {
-		margin-bottom: 10px;
+		margin: 10px 0px;
 		@include site_font;
+	}
+	
+	input {
+	
+		@include input_style;
 	}
 }
 
+#select_list, #add_word_form {
+
+	width: 300px;
+	height: 500px;
+	float: left;
+	
+	h1 {
+	
+		margin-bottom: 10px;
+	}
+	
+	input {
+	
+		@include input_style;
+	}
+}
+
+#select_list {
+
+	margin-right: 30px;
+}
+
+#list_results {
+
+	background: white;
+}
+
+//New Word Page
+
+#select_list, #reference_list, #add_word_form {
+
+	width: 250px;
+	height: 500px;
+	margin-right: 30px;
+	
+	h1 {
+		
+		font-size: 20px;
+	}
+		
+}
+
+#reference_list {
+
+	padding: 10px;
+	
+	h1 {
+	
+		margin-bottom: 30px;
+	}
+}
+
+#add_word_form {
 
 
-
-
-
+	input {
+	
+		margin-bottom: 20px;
+	}
+}

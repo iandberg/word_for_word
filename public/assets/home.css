@@ -1,4 +1,9 @@
-/* line 6, ../../app/assets/stylesheets/home.css.scss */
+@font-face {
+  font-family: "UnderwoodChampionRegular";
+  src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
+}
+
+/* line 7, ../../app/assets/stylesheets/home.css.scss */
 #intro, #home_search {
   width: 380px;
   height: 400px;
@@ -6,18 +11,24 @@
   margin-left: 10px;
 }
 
-/* line 15, ../../app/assets/stylesheets/home.css.scss */
+/* line 16, ../../app/assets/stylesheets/home.css.scss */
 #intro {
   border-right: 3px solid black;
 }
 
-/* line 20, ../../app/assets/stylesheets/home.css.scss */
+/* line 21, ../../app/assets/stylesheets/home.css.scss */
 #intro ul li {
   margin-left: 40px;
   list-style-type: circle;
 }
 
-/* line 26, ../../app/assets/stylesheets/home.css.scss */
+/* line 29, ../../app/assets/stylesheets/home.css.scss */
 #home_search h1 {
   font-size: 30px;
+}
+
+/* line 35, ../../app/assets/stylesheets/home.css.scss */
+#home_search_results {
+  background-color: white;
+  width: 100px;
 }

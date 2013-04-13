@@ -20,9 +20,9 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: #f1ecd6;
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: black 2px 2px 30px;
+  -moz-box-shadow: black 2px 2px 30px;
+  box-shadow: black 2px 2px 30px;
   background: url(images/wrinkled.png) no-repeat;
 }
 
@@ -41,23 +41,42 @@ h1 {
   font-family: "UnderwoodChampionRegular";
   margin-bottom: 30px;
 }
+/* line 40, ../../app/assets/stylesheets/screen.css.scss */
+#header h1 a {
+  text-decoration: none;
+  color: black;
+}
 
-/* line 42, ../../app/assets/stylesheets/screen.css.scss */
+/* line 48, ../../app/assets/stylesheets/screen.css.scss */
 #nav li {
   float: right;
   margin-right: 20px;
 }
-/* line 47, ../../app/assets/stylesheets/screen.css.scss */
+/* line 53, ../../app/assets/stylesheets/screen.css.scss */
 #nav li a {
-  color: black;
   text-decoration: none;
+  color: black;
 }
-/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 45, ../../app/assets/stylesheets/_base.scss */
 #nav li a:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid black;
 }
 
-/* line 53, ../../app/assets/stylesheets/screen.css.scss */
+/* line 59, ../../app/assets/stylesheets/screen.css.scss */
 #nav {
   float: right;
+}
+
+/* line 64, ../../app/assets/stylesheets/screen.css.scss */
+.autocomplete_link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding-left: .2em;
+  padding-right: .2em;
+}
+/* line 29, ../../app/assets/stylesheets/_base.scss */
+.autocomplete_link:hover {
+  color: white;
+  background-color: black;
 }

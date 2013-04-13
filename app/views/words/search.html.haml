@@ -25,26 +25,29 @@
 		#tabs_1.results_panel
 			%ul
 				- @word_list.each do |w|
-					%li
-						%a{:href => words_path + '/search?subject=' + w.the_word.downcase}= w.the_word
+					- if w.type == 'normal'
+						%li
+							%a{:href => words_path + '/search?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 
 		#tabs_2.results_panel
 			%ul
 				- @word_list.each do |w|
 					- if w.type == 'song'
 						%li
-							%a{:href => words_search_path + '?subject=' + w.the_word.downcase}= w.the_word
+							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_3.results_panel
 			%ul
 				%li books result
 				%li books result
 				%li books result
 				%li books result
-%img{:id => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
+
+%img{:class => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
+
 #search_area
 	%form{:id => 'new_search', :action => words_search_path, :method => 'post'}
 		%p Find words associated with:
-		%input{:name => 'subject', :type => 'text', :placeholder => 'word'}
+		%input{:name => 'subject', :type => 'text', :size => '16', :placeholder => 'word'}
 		%p that have
 		%input{:name => 'syllables', :type => 'text', :size => '1', :placeholder => '#'}
 		%p syllables

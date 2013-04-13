@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 	background-color: $main_color;
-	@include box-shadow;
+	@include box-shadow(black 2px 2px 30px);
 	background: url(images/wrinkled.png) no-repeat;
 }
 
@@ -36,6 +36,12 @@ h1 {
 
 	@include site_font;
 	margin-bottom: 30px;	
+	
+	h1 a {
+	
+		text-decoration: none;
+		color: black;
+	}
 }
 
 
@@ -45,8 +51,8 @@ h1 {
 	margin-right: 20px;
 	
 	a {
-		color: black;
-		@include hover-link;
+	
+		@include link_nav; 
 	}
 }
 
@@ -55,7 +61,10 @@ h1 {
 	float: right;
 }
 
+.autocomplete_link {
 
+	@include autocomplete_link;
+}
 
 
 

@@ -29,54 +29,57 @@
 }
 /* line 36, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists a {
-  color: black;
   font-family: "UnderwoodChampionRegular";
   text-decoration: none;
+  color: black;
+  padding-left: .2em;
+  padding-right: .2em;
 }
-/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 29, ../../app/assets/stylesheets/_base.scss */
 #subject_lists a:hover {
-  text-decoration: underline;
+  color: white;
+  background-color: black;
 }
 /* line 41, ../../app/assets/stylesheets/words.css.scss */
-#subject_lists a:link {
-  color: black;
-}
-/* line 47, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists #current_list, #subject_lists #syllables {
   font-family: "UnderwoodChampionRegular";
 }
 
-/* line 54, ../../app/assets/stylesheets/words.css.scss */
+/* line 48, ../../app/assets/stylesheets/words.css.scss */
 #result_tabs {
   height: 450px;
   background-color: #f1ecd6;
 }
 
-/* line 72, ../../app/assets/stylesheets/words.css.scss */
+/* line 66, ../../app/assets/stylesheets/words.css.scss */
 .results_panel ul li {
   font-size: .8em;
   line-height: 1.5em;
 }
-/* line 77, ../../app/assets/stylesheets/words.css.scss */
+/* line 71, ../../app/assets/stylesheets/words.css.scss */
 .results_panel ul li a {
   text-decoration: none;
+  color: black;
+  padding-left: .2em;
+  padding-right: .2em;
 }
-/* line 4, ../../../../../../../../../Users/iandahlberg/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+/* line 29, ../../app/assets/stylesheets/_base.scss */
 .results_panel ul li a:hover {
-  text-decoration: underline;
+  color: white;
+  background-color: black;
 }
 
-/* line 81, ../../app/assets/stylesheets/words.css.scss */
+/* line 77, ../../app/assets/stylesheets/words.css.scss */
 .ui-tabs-anchor {
   font-family: "UnderwoodChampionRegular";
 }
 
-/* line 87, ../../app/assets/stylesheets/words.css.scss */
-#divider {
+/* line 83, ../../app/assets/stylesheets/words.css.scss */
+.divider {
   float: left;
 }
 
-/* line 93, ../../app/assets/stylesheets/words.css.scss */
+/* line 89, ../../app/assets/stylesheets/words.css.scss */
 #search_area {
   width: 275px;
   height: 400px;
@@ -84,9 +87,70 @@
   padding: 20px;
   float: left;
   border: 3px solid black;
+  font-size: 16px;
 }
-/* line 102, ../../app/assets/stylesheets/words.css.scss */
+/* line 99, ../../app/assets/stylesheets/words.css.scss */
 #search_area p {
-  margin-bottom: 10px;
+  margin: 10px 0px;
   font-family: "UnderwoodChampionRegular";
+}
+/* line 104, ../../app/assets/stylesheets/words.css.scss */
+#search_area input {
+  font-size: 20px;
+  height: 30px;
+  display: block;
+  font-family: "UnderwoodChampionRegular";
+}
+
+/* line 110, ../../app/assets/stylesheets/words.css.scss */
+#select_list, #add_word_form {
+  width: 300px;
+  height: 500px;
+  float: left;
+}
+/* line 116, ../../app/assets/stylesheets/words.css.scss */
+#select_list h1, #add_word_form h1 {
+  margin-bottom: 10px;
+}
+/* line 121, ../../app/assets/stylesheets/words.css.scss */
+#select_list input, #add_word_form input {
+  font-size: 20px;
+  height: 30px;
+  display: block;
+  font-family: "UnderwoodChampionRegular";
+}
+
+/* line 127, ../../app/assets/stylesheets/words.css.scss */
+#select_list {
+  margin-right: 30px;
+}
+
+/* line 132, ../../app/assets/stylesheets/words.css.scss */
+#list_results {
+  background: white;
+}
+
+/* line 139, ../../app/assets/stylesheets/words.css.scss */
+#select_list, #reference_list, #add_word_form {
+  width: 250px;
+  height: 500px;
+  margin-right: 30px;
+}
+/* line 145, ../../app/assets/stylesheets/words.css.scss */
+#select_list h1, #reference_list h1, #add_word_form h1 {
+  font-size: 20px;
+}
+
+/* line 152, ../../app/assets/stylesheets/words.css.scss */
+#reference_list {
+  padding: 10px;
+}
+/* line 156, ../../app/assets/stylesheets/words.css.scss */
+#reference_list h1 {
+  margin-bottom: 30px;
+}
+
+/* line 165, ../../app/assets/stylesheets/words.css.scss */
+#add_word_form input {
+  margin-bottom: 20px;
 }

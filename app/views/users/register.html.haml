@@ -2,10 +2,7 @@
 	%h1 Register
 
 	%form{:method => 'post', :action => users_register_path}
-		%label{:for => 'username'}Username
-		%input{:name => 'username', :type => 'text'}
-		%label{:for => 'password'}Password
-		%input{:name => 'password', :type => 'text'}
-		%label{:for => 'passconf'}Confirm Password
-		%input{:name => 'passconf', :type => 'text'}
+		%input{:name => 'user[username]', :type => 'text', :placeholder => 'Username' }
+		%input{:name => 'user[password]', :type => 'password', :placeholder => 'Password' }
+		%input{:name => 'password_confirmation', :type => 'password', :placeholder => 'Confirm Password' }
 		%input{:type => 'submit'}

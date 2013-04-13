@@ -16,14 +16,23 @@ h1 {
 }
 /* line 16, ../../app/assets/stylesheets/users.css.scss */
 #login_form input, #register_form input {
+  margin: 20px 0px;
+  font-size: 20px;
+  height: 30px;
   display: block;
-  margin-bottom: 20px;
+  font-family: "UnderwoodChampionRegular";
 }
 /* line 22, ../../app/assets/stylesheets/users.css.scss */
 #login_form label, #register_form label {
+  font-size: 20px;
+  margin: 10px 0px;
   font-family: "UnderwoodChampionRegular";
 }
-/* line 27, ../../app/assets/stylesheets/users.css.scss */
+/* line 29, ../../app/assets/stylesheets/users.css.scss */
+#login_form input[type=password], #register_form input[type=password] {
+  font-family: 'Courier';
+}
+/* line 34, ../../app/assets/stylesheets/users.css.scss */
 #login_form h1, #register_form h1 {
   margin-bottom: 20px;
 }

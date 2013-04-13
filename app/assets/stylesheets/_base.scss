@@ -1,7 +1,7 @@
 
 @import "compass/css3";
-@import "compass/typography/links/hover-link";
 @import "compass/css3/box-shadow";
+@import "compass/css3/images";
 
 @include font-face("UnderwoodChampionRegular", font-files("fonts/underwood_champion-webfont.ttf"));
 
@@ -18,4 +18,38 @@ $manila_folder: #ffcc99;
 
 	margin: 0 auto;
 	display: block;
+}
+
+@mixin link_highlight {
+	
+	text-decoration: none;
+	color: black;
+	padding-left: .2em;
+	padding-right: .2em;
+	&:hover {
+		color: white;
+		background-color: black;
+	}
+}
+
+@mixin autocomplete_link {
+
+	display: block;
+	@include link_highlight;
+}
+
+@mixin link_nav {
+
+	text-decoration: none;
+	color: black;
+	&:hover { border-bottom: 2px solid black; }
+}
+
+@mixin input_style {
+
+		font-size: 20px;
+		height: 30px;
+		display: block;
+		@include site_font;
+
 }

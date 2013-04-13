@@ -13,3 +13,6 @@ gem 'jquery-ui-sass-rails'
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "simple_form", "~> 2.1.0"
+group :development, :test do
+	gem "rspec-rails"
+end

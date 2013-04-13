@@ -14,14 +14,21 @@ h1 {
 	@include centered;
 
 	input {
-	
-		display: block;
-		margin-bottom: 20px;
+		
+		margin: 20px 0px;
+		@include input_style;
 	}
 
 	label {
-	
+		
+		font-size: 20px;
+		margin: 10px 0px;
 		@include site_font;
+	}
+	
+	input[type=password] {
+	
+		font-family: 'Courier';	
 	}
 	
 	h1 {

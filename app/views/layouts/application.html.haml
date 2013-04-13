@@ -22,10 +22,14 @@
 						%a{:href => words_search_path}
 							Search
 					%li
+						%a{:href => words_new_path}
+							New Word
+					%li
 						%a{:href => root_path}
 							Home
 
-				%h1 Word for Word
+				%h1
+					%a{:href => home_index_path} Word for Word
 				
 			= yield
 			#footer
