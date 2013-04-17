@@ -3,32 +3,52 @@
   src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
 }
 
-/* line 7, ../../app/assets/stylesheets/home.css.scss */
+@font-face {
+  font-family: "MyUnderwoodRegular";
+  src: url(/assets/fonts/MyUnderwood-webfont.ttf) format('truetype');
+}
+
+/* line 3, ../../app/assets/stylesheets/home.css.scss */
 #intro, #home_search {
-  width: 380px;
+  width: 370px;
   height: 400px;
   padding: 20px;
   margin-left: 10px;
 }
 
-/* line 16, ../../app/assets/stylesheets/home.css.scss */
+/* line 12, ../../app/assets/stylesheets/home.css.scss */
 #intro {
-  border-right: 3px solid black;
+  font-size: 20px;
+}
+/* line 16, ../../app/assets/stylesheets/home.css.scss */
+#intro p {
+  margin-bottom: 20px;
 }
 
 /* line 21, ../../app/assets/stylesheets/home.css.scss */
 #intro ul li {
   margin-left: 40px;
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 /* line 29, ../../app/assets/stylesheets/home.css.scss */
 #home_search h1 {
-  font-size: 30px;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+/* line 34, ../../app/assets/stylesheets/home.css.scss */
+#home_search input {
+  float: left;
+}
+/* line 39, ../../app/assets/stylesheets/home.css.scss */
+#home_search [type=submit] {
+  height: 20px;
 }
 
-/* line 35, ../../app/assets/stylesheets/home.css.scss */
+/* line 45, ../../app/assets/stylesheets/home.css.scss */
 #home_search_results {
-  background-color: white;
-  width: 100px;
+  width: 240px;
+  margin-left: 5px;
+  font-size: 20px;
+  background: white;
 }

@@ -16,17 +16,57 @@ $(document).ready ->
 				$('#list_results').html(data)
 			'json')
 	
-
+	
+	$('#avail_lists').submit (event) ->
+		event.preventDefault()
+	
 	$('#list_results').on(
 		"click"
 		".autocomplete_link"
 		->
+			event.stopPropagation()
+
 			search_term = $(this).html()
+
+			$('#list_search_field').val(
+				search_term		
+			)
 			
 			$.get(
 				'/words/get_a_list?subject=' + search_term
 				(data) ->
 					$('#list').html(data)
 					$('[name=list_word]').val(search_term)
+					$('#new_word_submit').prop('disabled', false)
 				'json')
 		)
+		
+	$(document).click ->
+		$('#list_results').html('')
+	
+	$('#new_word').on(
+		"submit"
+		->
+			$('#thank_you').html('')
+			$('#thank_you').show()
+			
+			form = $(this)
+			
+			$.post(
+				form.attr('action')
+				form.serialize()
+				(data) ->
+					console.log(data)
+					$('#thank_you').html(data.thanks)
+					$('#thank_you').fadeOut(4000)
+
+				'json')
+			return false;
+		)
+
+
+		
+		
+		
+		
+		

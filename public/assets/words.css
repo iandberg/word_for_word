@@ -3,6 +3,11 @@
   src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "MyUnderwoodRegular";
+  src: url(/assets/fonts/MyUnderwood-webfont.ttf) format('truetype');
+}
+
 /* line 10, ../../app/assets/stylesheets/words.css.scss */
 #results_area {
   width: 400px;
@@ -14,72 +19,71 @@
 #search_subject {
   height: 50px;
 }
-/* line 22, ../../app/assets/stylesheets/words.css.scss */
+/* line 21, ../../app/assets/stylesheets/words.css.scss */
 #search_subject h1 {
   margin-right: 30px;
 }
 
-/* line 28, ../../app/assets/stylesheets/words.css.scss */
+/* line 27, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists {
   margin-bottom: 20px;
 }
-/* line 32, ../../app/assets/stylesheets/words.css.scss */
+/* line 31, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists p {
   margin: 5px 0px;
 }
-/* line 36, ../../app/assets/stylesheets/words.css.scss */
+/* line 35, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists a {
-  font-family: "UnderwoodChampionRegular";
-  text-decoration: none;
-  color: black;
+  font-family: "MyUnderwoodRegular";
   padding-left: .2em;
   padding-right: .2em;
+  text-decoration: none;
+  color: black;
 }
-/* line 29, ../../app/assets/stylesheets/_base.scss */
+/* line 33, ../../app/assets/stylesheets/_base.scss */
 #subject_lists a:hover {
   color: white;
   background-color: black;
 }
-/* line 41, ../../app/assets/stylesheets/words.css.scss */
+/* line 40, ../../app/assets/stylesheets/words.css.scss */
 #subject_lists #current_list, #subject_lists #syllables {
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
 }
 
-/* line 48, ../../app/assets/stylesheets/words.css.scss */
+/* line 47, ../../app/assets/stylesheets/words.css.scss */
 #result_tabs {
   height: 450px;
-  background-color: #f1ecd6;
 }
 
-/* line 66, ../../app/assets/stylesheets/words.css.scss */
+/* line 61, ../../app/assets/stylesheets/words.css.scss */
 .results_panel ul li {
   font-size: .8em;
   line-height: 1.5em;
 }
-/* line 71, ../../app/assets/stylesheets/words.css.scss */
+/* line 66, ../../app/assets/stylesheets/words.css.scss */
 .results_panel ul li a {
-  text-decoration: none;
-  color: black;
   padding-left: .2em;
   padding-right: .2em;
+  text-decoration: none;
+  color: black;
 }
-/* line 29, ../../app/assets/stylesheets/_base.scss */
+/* line 33, ../../app/assets/stylesheets/_base.scss */
 .results_panel ul li a:hover {
   color: white;
   background-color: black;
 }
 
-/* line 77, ../../app/assets/stylesheets/words.css.scss */
+/* line 72, ../../app/assets/stylesheets/words.css.scss */
 .ui-tabs-anchor {
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
 }
 
-/* line 83, ../../app/assets/stylesheets/words.css.scss */
+/* line 78, ../../app/assets/stylesheets/words.css.scss */
 .divider {
   float: left;
 }
 
-/* line 89, ../../app/assets/stylesheets/words.css.scss */
+/* line 84, ../../app/assets/stylesheets/words.css.scss */
 #search_area {
   width: 275px;
   height: 400px;
@@ -89,68 +93,56 @@
   border: 3px solid black;
   font-size: 16px;
 }
-/* line 99, ../../app/assets/stylesheets/words.css.scss */
+/* line 94, ../../app/assets/stylesheets/words.css.scss */
 #search_area p {
   margin: 10px 0px;
-  font-family: "UnderwoodChampionRegular";
-}
-/* line 104, ../../app/assets/stylesheets/words.css.scss */
-#search_area input {
-  font-size: 20px;
-  height: 30px;
-  display: block;
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
 }
 
-/* line 110, ../../app/assets/stylesheets/words.css.scss */
+/* line 101, ../../app/assets/stylesheets/words.css.scss */
 #select_list, #add_word_form {
   width: 300px;
   height: 500px;
   float: left;
 }
-/* line 116, ../../app/assets/stylesheets/words.css.scss */
+/* line 107, ../../app/assets/stylesheets/words.css.scss */
 #select_list h1, #add_word_form h1 {
   margin-bottom: 10px;
 }
-/* line 121, ../../app/assets/stylesheets/words.css.scss */
-#select_list input, #add_word_form input {
-  font-size: 20px;
-  height: 30px;
-  display: block;
-  font-family: "UnderwoodChampionRegular";
-}
 
-/* line 127, ../../app/assets/stylesheets/words.css.scss */
+/* line 114, ../../app/assets/stylesheets/words.css.scss */
 #select_list {
   margin-right: 30px;
 }
 
-/* line 132, ../../app/assets/stylesheets/words.css.scss */
+/* line 119, ../../app/assets/stylesheets/words.css.scss */
 #list_results {
+  width: 240px;
+  margin-left: 5px;
+  font-size: 20px;
   background: white;
 }
 
-/* line 139, ../../app/assets/stylesheets/words.css.scss */
+/* line 127, ../../app/assets/stylesheets/words.css.scss */
 #select_list, #reference_list, #add_word_form {
-  width: 250px;
+  width: 240px;
   height: 500px;
   margin-right: 30px;
-}
-/* line 145, ../../app/assets/stylesheets/words.css.scss */
-#select_list h1, #reference_list h1, #add_word_form h1 {
   font-size: 20px;
+  padding: 0px 5px;
 }
-
-/* line 152, ../../app/assets/stylesheets/words.css.scss */
-#reference_list {
-  padding: 10px;
+/* line 135, ../../app/assets/stylesheets/words.css.scss */
+#select_list h1, #reference_list h1, #add_word_form h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
 }
-/* line 156, ../../app/assets/stylesheets/words.css.scss */
-#reference_list h1 {
+/* line 141, ../../app/assets/stylesheets/words.css.scss */
+#select_list h2, #reference_list h2, #add_word_form h2 {
+  font-size: 15px;
   margin-bottom: 30px;
 }
 
-/* line 165, ../../app/assets/stylesheets/words.css.scss */
+/* line 153, ../../app/assets/stylesheets/words.css.scss */
 #add_word_form input {
   margin-bottom: 20px;
 }

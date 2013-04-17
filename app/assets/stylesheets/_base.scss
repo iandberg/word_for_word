@@ -1,17 +1,21 @@
-
 @import "compass/css3";
 @import "compass/css3/box-shadow";
 @import "compass/css3/images";
 
 @include font-face("UnderwoodChampionRegular", font-files("fonts/underwood_champion-webfont.ttf"));
+@include font-face("MyUnderwoodRegular", font-files("fonts/MyUnderwood-webfont.ttf"));
 
 $main_color: #F1ECD6;
 $manila_folder: #ffcc99;
 
 @mixin site_font {
 
-	font-family: "UnderwoodChampionRegular";
+	font-family: "MyUnderwoodRegular";
+}
 
+@mixin title_font {
+
+	font-family: 'MyUnderwoodRegular';
 }
 
 @mixin centered {
@@ -22,10 +26,10 @@ $manila_folder: #ffcc99;
 
 @mixin link_highlight {
 	
-	text-decoration: none;
-	color: black;
 	padding-left: .2em;
 	padding-right: .2em;
+	text-decoration: none;
+	color: black;
 	&:hover {
 		color: white;
 		background-color: black;
@@ -36,6 +40,14 @@ $manila_folder: #ffcc99;
 
 	display: block;
 	@include link_highlight;
+}
+
+@mixin autocomplete_results {
+
+	width: 240px;
+	margin-left: 5px;
+	font-size: 20px;
+	background: white;
 }
 
 @mixin link_nav {

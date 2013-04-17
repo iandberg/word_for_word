@@ -1,15 +1,21 @@
 class WordsController < ApplicationController
 
+	def index
+	
+	end
 
 	def autocomplete
 		
 		unless params[:subject] == ''
 		
-			@words = Word.find_by_sql("SELECT subject FROM words WHERE subject LIKE '#{params[:subject]}%'")
-
+			@words = Word.get_autocomplete(params[:subject])
+						
 			@data = Array.new
-
+			
 			@words.each do |w|		
+				if w.subject.length > 16
+					w.subject = w.subject[0..16] << "…"
+				end
 				@data << "<div class='autocomplete_link'>" + w.subject + "</div>"
 			end 
 			
@@ -24,18 +30,29 @@ class WordsController < ApplicationController
 		
 	end
 
+#------------------------standard search via home page or results page
 
 	def search
 
-		@default_subject = "Fantasy"
+		@default_subject = "Bird"
 		@syllables = ".*"
-
-		if params['subject'] #standard search via home page or results page
+		@begins = ".*"
+		@ends = ".*"
+		
+		if params['subject']
 
 			@search_subject = Word.get_subject_record params['subject']
 			
 			unless params['syllables'] == '' or  params['syllables'].nil? # if no. of syllables given, replace default value
 				@syllables = params['syllables']
+			end
+
+			unless params['begins'] == '' or  params['begins'].nil? # if no. of syllables given, replace default value
+				@begins = params['begins']
+			end
+
+			unless params['ends'] == '' or  params['ends'].nil? # if no. of syllables given, replace default value
+				@ends = params['ends']
 			end
 			
 			@list_info = Word.get_lists @search_subject.id
@@ -53,7 +70,7 @@ class WordsController < ApplicationController
 				end
 			end
 			
-			@word_list = Word.get_results @current_list_id, @syllables
+			@word_list = Word.get_results @current_list_id, @syllables, @begins, @ends
 		
 		elsif params[:list_subject] #user clicks on list name
 
@@ -63,7 +80,7 @@ class WordsController < ApplicationController
 			
 			@current_list_name = @search_subject.subject
 			
-			@word_list = Word.get_results @search_subject.id, @syllables
+			@word_list = Word.get_results @search_subject.id, @syllables, @begins, @ends
 
 		else
 
@@ -73,25 +90,27 @@ class WordsController < ApplicationController
 		
 			@current_list = @search_subject.subject
 		
-			@word_list = Word.get_results @search_subject.id, @syllables
+			@word_list = Word.get_results @search_subject.id, @syllables, @begins, @ends
 		
 		end
 	end
-	
-	def get_a_list
+#------------------------ for user add word page
+	def get_a_list 
 
 			@syllables = ".*"
+			@begins = ".*"
+			@ends = ".*"
 		
 			@search_subject = Word.get_subject_record params[:subject]
 			
-			@word_list = Word.get_results @search_subject.id, @syllables
+			@word_list = Word.get_results @search_subject.id, @syllables, @begins, @ends
 		
 			unless params[:subject] == ''
 
 				@data = Array.new
-
+				
 				@word_list.each do |l|
-					@data << "<div>" + l.the_word + "</div>"
+					@data << "<div >" + l.the_word + "</div>"
 				end
 			else
 				@data = Array.new
@@ -103,6 +122,11 @@ class WordsController < ApplicationController
 	end
 	
 	def new
+	
+		unless session[:username]
+			redirect_to root_path
+		end
+
 		@types = WordLink.get_types()
 	end		
 
@@ -127,21 +151,22 @@ class WordsController < ApplicationController
 	end
 	
 	def add_word
-	
+		
+		params[:new_word].capitalize!
 		
 		@new_word = Word.where(:subject => "#{params[:new_word]}").first_or_create(:syllables => "#{params[:syllables]}")
 		
 		@list_word = Word.get_subject_record params[:list_word]
 		
-		WordLink.new(:subject_id => "#{@new_word.id}", :list_id => "#{@list_word.id}", :subject_type => "#{params[:subject_type]}").save
+		WordLink.where(:subject_id => "#{@new_word.id}", :list_id => "#{@list_word.id}",
+									 :subject_type => "#{params[:subject_type]}").first_or_create()
 		
-		render :text => params
-		
+		@data = { 'thanks' => 'Words added. Thanks!'}
+
+		respond_to do |f|
+			f.json { render :json => @data }
+		end
+
 	end
-	
-	def index
-	
-	end
-	
-	
+
 end

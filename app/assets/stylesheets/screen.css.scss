@@ -14,12 +14,17 @@ body {
 #wrapper {
 
 	width: 900px;
-	height: 900px;
+	height: 850px;
 	margin: 0 auto;
 	padding: 20px;
 	background-color: $main_color;
-	@include box-shadow(black 2px 2px 30px);
 	background: url(images/wrinkled.png) no-repeat;
+	@include box-shadow(black 2px 2px 30px);
+}
+
+#footer {
+	margin: 45px 0px;
+	text-align: center;
 }
 
 h1 {
@@ -38,7 +43,6 @@ h1 {
 	margin-bottom: 30px;	
 	
 	h1 a {
-	
 		text-decoration: none;
 		color: black;
 	}
@@ -66,7 +70,10 @@ h1 {
 	@include autocomplete_link;
 }
 
+input {
 
+	@include input_style;
+}
 
 
 

@@ -14,12 +14,40 @@ $(document).ready ->
 				console.log data
 				$('#home_search_results').html(data)
 			'json')
-
+	
+	$(document).click ->
+		$('#home_search_results').html('')
+	
 	$('#home_search').on(
 		'click'
 		'.autocomplete_link'
 		->
+			event.stopPropagation()
+			
 			$('#search_input').val(
-				$(this).html()			
+				$(this).text()		
 			)
 		)
+		
+	$(document).keydown (e) ->
+	
+		if e.keyCode == 38
+			words = $('.autocomplete_link').length
+			if words > 0
+				$("#home_search_results div:first-child").addClass('selected')
+			e.preventDefault()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

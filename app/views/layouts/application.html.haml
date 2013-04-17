@@ -1,7 +1,7 @@
 !!!
 %html
 	%head
-		%title Word For Word
+		%title= content_for?(:title) ? yield(:title) : "Word For Word"
 		%meta{:charset => "utf-8"}
 		%meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
 		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
@@ -13,17 +13,23 @@
 			#header
 				%ul#nav
 					%li
-						%a{:href => users_login_path}
-							Login
-					%li
-						%a{:href => users_register_path}
-							Register
+						- if session[:username]
+							%a{:href => users_logout_path}
+								Logout
+						- else
+							%a{:href => users_login_path}
+								Login
+						- unless session[:username]
+							%li
+								%a{:href => new_user_path}
+									Register
 					%li
 						%a{:href => words_search_path}
 							Search
-					%li
-						%a{:href => words_new_path}
-							New Word
+					- if session[:username]
+						%li
+							%a{:href => words_new_path}
+								Add New Word
 					%li
 						%a{:href => root_path}
 							Home
@@ -32,4 +38,16 @@
 					%a{:href => home_index_path} Word for Word
 				
 			= yield
-			#footer
+
+		#footer
+			%p &copy; 2013 Ian Dahlberg
+			%p Made with Ruby on Rails, Coffescript, HAML &amp; SASS
+
+
+
+
+
+
+
+
+

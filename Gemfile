@@ -16,3 +16,4 @@ gem "simple_form", "~> 2.1.0"
 group :development, :test do
 	gem "rspec-rails"
 end
+gem "dynamic_form"

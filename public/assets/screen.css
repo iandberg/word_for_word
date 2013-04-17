@@ -7,6 +7,11 @@
   src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "MyUnderwoodRegular";
+  src: url(/assets/fonts/MyUnderwood-webfont.ttf) format('truetype');
+}
+
 /* line 8, ../../app/assets/stylesheets/screen.css.scss */
 body {
   font-family: "Courier";
@@ -16,67 +21,81 @@ body {
 /* line 14, ../../app/assets/stylesheets/screen.css.scss */
 #wrapper {
   width: 900px;
-  height: 900px;
+  height: 850px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f1ecd6;
+  background: url(images/wrinkled.png) no-repeat;
   -webkit-box-shadow: black 2px 2px 30px;
   -moz-box-shadow: black 2px 2px 30px;
   box-shadow: black 2px 2px 30px;
-  background: url(images/wrinkled.png) no-repeat;
 }
 
 /* line 25, ../../app/assets/stylesheets/screen.css.scss */
+#footer {
+  margin: 45px 0px;
+  text-align: center;
+}
+
+/* line 30, ../../app/assets/stylesheets/screen.css.scss */
 h1 {
   font-size: 40px;
 }
 
-/* line 30, ../../app/assets/stylesheets/screen.css.scss */
+/* line 35, ../../app/assets/stylesheets/screen.css.scss */
 .left {
   float: left;
 }
 
-/* line 35, ../../app/assets/stylesheets/screen.css.scss */
+/* line 40, ../../app/assets/stylesheets/screen.css.scss */
 #header {
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
   margin-bottom: 30px;
 }
-/* line 40, ../../app/assets/stylesheets/screen.css.scss */
+/* line 45, ../../app/assets/stylesheets/screen.css.scss */
 #header h1 a {
   text-decoration: none;
   color: black;
 }
 
-/* line 48, ../../app/assets/stylesheets/screen.css.scss */
+/* line 52, ../../app/assets/stylesheets/screen.css.scss */
 #nav li {
   float: right;
   margin-right: 20px;
 }
-/* line 53, ../../app/assets/stylesheets/screen.css.scss */
+/* line 57, ../../app/assets/stylesheets/screen.css.scss */
 #nav li a {
   text-decoration: none;
   color: black;
 }
-/* line 45, ../../app/assets/stylesheets/_base.scss */
+/* line 57, ../../app/assets/stylesheets/_base.scss */
 #nav li a:hover {
   border-bottom: 2px solid black;
 }
 
-/* line 59, ../../app/assets/stylesheets/screen.css.scss */
+/* line 63, ../../app/assets/stylesheets/screen.css.scss */
 #nav {
   float: right;
 }
 
-/* line 64, ../../app/assets/stylesheets/screen.css.scss */
+/* line 68, ../../app/assets/stylesheets/screen.css.scss */
 .autocomplete_link {
   display: block;
-  text-decoration: none;
-  color: black;
   padding-left: .2em;
   padding-right: .2em;
+  text-decoration: none;
+  color: black;
 }
-/* line 29, ../../app/assets/stylesheets/_base.scss */
+/* line 33, ../../app/assets/stylesheets/_base.scss */
 .autocomplete_link:hover {
   color: white;
   background-color: black;
+}
+
+/* line 73, ../../app/assets/stylesheets/screen.css.scss */
+input {
+  font-size: 20px;
+  height: 30px;
+  display: block;
+  font-family: "MyUnderwoodRegular";
 }

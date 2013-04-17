@@ -3,7 +3,10 @@ WordForWord::Application.routes.draw do
 	get "home/index"
 	
 	match "users/login" => "users#login"
-	match "users/register" => "users#register"
+	match "users/login_go" => "users#login_go"
+	match "users/logout" => "users#logout"
+	
+	resources :users
 	
 	match "words/" => "words#index"
 	match "words/search" => "words#search"

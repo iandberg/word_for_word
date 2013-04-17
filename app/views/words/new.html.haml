@@ -1,6 +1,9 @@
+- content_for :title do
+	Submit a Word
 #select_list.left
+	%h1 Step 1
+	%h2 Choose an existing list:
 	#form_area
-		%h1 Choose an existing list:
 		%form{:id => "avail_lists", :method => "post", :action => "avail_lists"}
 			%input{:id => "list_search_field", :name => "list_search_field", :type => "text", :placeholder => "list name"}
 		#list_results
@@ -8,13 +11,15 @@
 %img{:class => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
 
 #reference_list.left
-	%h1 Reference List
+	%h1 Step 2
+	%h2 Confirm your new word will fit in the list
 	#list
 	
 %img{:class => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
 
 #add_word_form.left
-	%h1 Enter your new word
+	%h1 Step 3
+	%h2 Add your new word
 	%form{:id => "new_word", :method => "post", :action => "add_word"}
 		%input{:type => "text", :name => "new_word", :placeholder => "new word(s)"}
 		%p Word Type
@@ -24,4 +29,5 @@
 		%p No. of Syllables
 		%input{:type => "text", :name => "syllables", :placeholder => "#", :size => "3"}
 		%input{:type => "hidden", :name => "list_word"}
-		%input{:type => "submit"}
+		%input{:type => "submit", :id => "new_word_submit", :disabled => true}
+	#thank_you

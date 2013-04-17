@@ -1,3 +1,5 @@
+- content_for :title do
+	Search
 #search_subject
 	%h1= @search_subject.subject
 #results_area
@@ -22,10 +24,12 @@
 				%a{:href => '#tabs_2'}Songs
 			%li
 				%a{:href => '#tabs_3'}Books
+			%li
+				%a{:href => '#tabs_4'}Phrases
 		#tabs_1.results_panel
 			%ul
 				- @word_list.each do |w|
-					- if w.type == 'normal'
+					- if w.type == 'regular'
 						%li
 							%a{:href => words_path + '/search?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 
@@ -37,11 +41,17 @@
 							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_3.results_panel
 			%ul
-				%li books result
-				%li books result
-				%li books result
-				%li books result
-
+				- @word_list.each do |w|
+					- if w.type == 'book'
+						%li
+							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
+		#tabs_4.results_panel
+			%ul
+				- @word_list.each do |w|
+					- if w.type == 'phrase'
+						%li
+							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
+					
 %img{:class => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
 
 #search_area
@@ -50,20 +60,12 @@
 		%input{:name => 'subject', :type => 'text', :size => '16', :placeholder => 'word'}
 		%p that have
 		%input{:name => 'syllables', :type => 'text', :size => '1', :placeholder => '#'}
-		%p syllables
+		%p syllables, and
+		%p begins with
+		%input{:name => 'begins', :type => 'text', :size => '10'}
+		%p and/or ends with
+		%input{:name => 'ends', :type => 'text', :size => '10'}
 		%input{:type => 'submit'}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	

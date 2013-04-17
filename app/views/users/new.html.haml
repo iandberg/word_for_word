@@ -1,0 +1,12 @@
+- content_for :title do
+	Register
+	
+#register_form
+	%h1 Register
+	%h2= notice
+	%form{:method => 'post', :action => users_path}
+		%input{:name => 'user[username]', :type => 'text', :placeholder => 'Username' }
+		%input{:name => 'user[email]', :placeholder => 'Email'}
+		%input{:name => 'user[password]', :type => 'password', :placeholder => 'Password' }
+		%input{:name => 'user[password_confirmation]', :type => 'password', :placeholder => 'Confirm Password' }
+		%input{:type => "submit"}

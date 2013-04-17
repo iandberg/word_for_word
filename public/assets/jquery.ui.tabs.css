@@ -13,6 +13,11 @@
   src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "MyUnderwoodRegular";
+  src: url(/assets/fonts/MyUnderwood-webfont.ttf) format('truetype');
+}
+
 /* line 13, ../../app/assets/stylesheets/jquery.ui.tabs.css.scss */
 .ui-tabs {
   position: relative;
@@ -70,7 +75,9 @@
 .ui-tabs .ui-tabs-panel {
   display: block;
   border-width: 0;
+  height: 300px;
+  overflow: auto;
   padding: 1em 1.4em;
-  background: #ffcc99;
-  border: 2px solid black;
+  background-image: url(images/lined_paper.png);
+  border-top: none;
 }

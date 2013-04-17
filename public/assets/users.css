@@ -3,9 +3,14 @@
   src: url(/assets/fonts/underwood_champion-webfont.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "MyUnderwoodRegular";
+  src: url(/assets/fonts/MyUnderwood-webfont.ttf) format('truetype');
+}
+
 /* line 6, ../../app/assets/stylesheets/users.css.scss */
 h1 {
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
 }
 
 /* line 11, ../../app/assets/stylesheets/users.css.scss */
@@ -17,22 +22,18 @@ h1 {
 /* line 16, ../../app/assets/stylesheets/users.css.scss */
 #login_form input, #register_form input {
   margin: 20px 0px;
-  font-size: 20px;
-  height: 30px;
-  display: block;
-  font-family: "UnderwoodChampionRegular";
 }
-/* line 22, ../../app/assets/stylesheets/users.css.scss */
+/* line 21, ../../app/assets/stylesheets/users.css.scss */
 #login_form label, #register_form label {
   font-size: 20px;
   margin: 10px 0px;
-  font-family: "UnderwoodChampionRegular";
+  font-family: "MyUnderwoodRegular";
 }
-/* line 29, ../../app/assets/stylesheets/users.css.scss */
+/* line 28, ../../app/assets/stylesheets/users.css.scss */
 #login_form input[type=password], #register_form input[type=password] {
   font-family: 'Courier';
 }
-/* line 34, ../../app/assets/stylesheets/users.css.scss */
+/* line 33, ../../app/assets/stylesheets/users.css.scss */
 #login_form h1, #register_form h1 {
   margin-bottom: 20px;
 }

@@ -55,8 +55,11 @@
 .ui-tabs .ui-tabs-panel {
 	display: block;
 	border-width: 0;
+	height: 300px;
+	overflow: auto;
 	padding: 1em 1.4em;
-	background: $manila_folder;
-	border: 2px solid black;
-	
+//	background: $manila_folder;
+	background-image: url(images/lined_paper.png);
+//	border: 2px solid black;
+	border-top: none;
 }

@@ -33,11 +33,8 @@ ActiveRecord::Schema.define(:version => 20130409203025) do
     t.integer  "user_id"
     t.text     "subject"
     t.integer  "syllables"
-    t.integer  "word_link_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
-
-  add_index "words", ["word_link_id"], :name => "index_words_on_word_link_id"
 
 end

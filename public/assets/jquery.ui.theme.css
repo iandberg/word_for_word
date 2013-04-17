@@ -24,8 +24,6 @@
 
 /* line 41, ../../app/assets/stylesheets/jquery.ui.theme.css.scss */
 .ui-widget-header {
-  border: 1px solid #aaaaaa;
-  background: #cccccc url("/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
   color: #222222;
   font-weight: bold;
 }
@@ -79,7 +77,6 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-  border: 2px solid black;
   border-radius: 15px 15px 0 0;
   background: white url("/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
   font-weight: normal;
@@ -218,14 +215,14 @@
 ----------------------------------*/
 /* Corner radius */
 /* Overlays */
-/* line 399, ../../app/assets/stylesheets/jquery.ui.theme.css.scss */
+/* line 222, ../../app/assets/stylesheets/jquery.ui.theme.css.scss */
 .ui-widget-overlay {
   background: #aaaaaa url("/assets/jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
   opacity: 0.3;
   filter: Alpha(Opacity=30);
 }
 
-/* line 404, ../../app/assets/stylesheets/jquery.ui.theme.css.scss */
+/* line 227, ../../app/assets/stylesheets/jquery.ui.theme.css.scss */
 .ui-widget-shadow {
   margin: -8px 0 0 -8px;
   padding: 8px;
