@@ -18,11 +18,9 @@ group :assets do
 	gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'thin'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-ui-sass-rails'
 gem "haml"
-gem "simple_form", "~> 2.1.0"
-gem "dynamic_form"
 gem "heroku"
+gem 'thin'
