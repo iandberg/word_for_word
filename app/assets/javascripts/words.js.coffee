@@ -64,9 +64,12 @@ $(document).ready ->
 			return false;
 		)
 
+	$('.clipboard').click () ->
+		text = $(this).parent().children('li').children('a')
+		results = new Array()
+		text.each ->
+			results.push this.innerHTML
+		window.prompt "Ctrl/Cmnd+C to copy to clipboard", results.toString().replace /,/g,'\r'
 
-		
-		
-		
 		
 		

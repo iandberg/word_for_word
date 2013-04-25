@@ -132,6 +132,12 @@
 	font-size: 20px;
 	padding: 0px 5px;
 	
+	#list {
+	
+		overflow: auto;
+	
+	}
+	
 	h1 {
 		
 		font-size: 26px;
@@ -156,3 +162,15 @@
 	}
 }
 
+.clipboard {
+
+	height: 42px;
+	width: 42px;
+	background: url(images/clipboard.png);
+	float: right;
+}
+
+	
+	
+	
+	

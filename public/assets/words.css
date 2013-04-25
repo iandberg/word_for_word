@@ -132,17 +132,29 @@
   padding: 0px 5px;
 }
 /* line 135, ../../app/assets/stylesheets/words.css.scss */
+#select_list #list, #reference_list #list, #add_word_form #list {
+  overflow: auto;
+}
+/* line 141, ../../app/assets/stylesheets/words.css.scss */
 #select_list h1, #reference_list h1, #add_word_form h1 {
   font-size: 26px;
   margin-bottom: 30px;
 }
-/* line 141, ../../app/assets/stylesheets/words.css.scss */
+/* line 147, ../../app/assets/stylesheets/words.css.scss */
 #select_list h2, #reference_list h2, #add_word_form h2 {
   font-size: 15px;
   margin-bottom: 30px;
 }
 
-/* line 153, ../../app/assets/stylesheets/words.css.scss */
+/* line 159, ../../app/assets/stylesheets/words.css.scss */
 #add_word_form input {
   margin-bottom: 20px;
+}
+
+/* line 165, ../../app/assets/stylesheets/words.css.scss */
+.clipboard {
+  height: 42px;
+  width: 42px;
+  background: url(images/clipboard.png);
+  float: right;
 }

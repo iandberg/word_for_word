@@ -28,6 +28,7 @@
 				%a{:href => '#tabs_4'}Phrases
 		#tabs_1.results_panel
 			%ul
+				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'regular'
 						%li
@@ -35,18 +36,21 @@
 
 		#tabs_2.results_panel
 			%ul
+				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'song'
 						%li
 							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_3.results_panel
 			%ul
+				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'book'
 						%li
 							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_4.results_panel
 			%ul
+				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'phrase'
 						%li
