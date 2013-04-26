@@ -12,5 +12,3 @@ class WordLink < ActiveRecord::Base
 	
 
 end
-
-

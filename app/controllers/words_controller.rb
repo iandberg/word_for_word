@@ -14,7 +14,7 @@ class WordsController < ApplicationController
 			
 			@words.each do |w|		
 				if w.subject.length > 16
-					w.subject = w.subject[0..16] << "…"
+					w.subject = w.subject[0..16] << "..."
 				end
 				@data << "<div class='autocomplete_link'>" + w.subject + "</div>"
 			end 
