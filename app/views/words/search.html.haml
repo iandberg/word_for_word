@@ -14,7 +14,7 @@
 		%p
 			Syllables:
 			%span#syllables
-				= @syllables == ".*" ? "Any" : @syllables
+				= @syllables == "." ? "Any" : @syllables
 
 	#result_tabs
 		%ul
@@ -28,7 +28,6 @@
 				%a{:href => '#tabs_4'}Phrases
 		#tabs_1.results_panel
 			%ul
-				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'regular'
 						%li
@@ -36,21 +35,18 @@
 
 		#tabs_2.results_panel
 			%ul
-				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'song'
 						%li
 							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_3.results_panel
 			%ul
-				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'book'
 						%li
 							%a{:href => words_search_path + '?subject=' + CGI.escape(w.the_word.downcase)}= w.the_word
 		#tabs_4.results_panel
 			%ul
-				.clipboard
 				- @word_list.each do |w|
 					- if w.type == 'phrase'
 						%li
@@ -59,6 +55,7 @@
 %img{:class => "divider", :src => "../assets/images/divider.png", :alt => "divider.png"}
 
 #search_area
+	= notice
 	%form{:id => 'new_search', :action => words_search_path, :method => 'post'}
 		%p Find words associated with:
 		%input{:name => 'subject', :type => 'text', :size => '16', :placeholder => 'word'}

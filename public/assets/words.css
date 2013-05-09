@@ -133,6 +133,7 @@
 }
 /* line 135, ../../app/assets/stylesheets/words.css.scss */
 #select_list #list, #reference_list #list, #add_word_form #list {
+  height: 400px;
   overflow: auto;
 }
 /* line 141, ../../app/assets/stylesheets/words.css.scss */

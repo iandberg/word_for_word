@@ -1,18 +1,15 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
-
 gem 'rails', '3.2.13'
 
+gem 'pg'
+
 group :development, :test do
-	gem 'mysql2'
 	gem "rspec-rails"
 	gem "haml-rails"
 end
 
-group :production do
-	gem 'pg'
-end
+
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'

@@ -64,7 +64,8 @@ $(document).ready ->
 			return false;
 		)
 
-	$('.clipboard').click () ->
+	$('.clipboard').click (e) ->
+		e.stopPropagation()
 		text = $(this).parent().children('li').children('a')
 		results = new Array()
 		text.each ->

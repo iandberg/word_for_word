@@ -4,27 +4,18 @@ class Word < ActiveRecord::Base
   	
   has_many :words, :through => :wordlinks
   attr_accessible :subject, :syllables, :user_id
-  
-  
-  
-  
-	def create_link
-	end
-	  
-    def self.get_autocomplete(letters)
+
+  	  
+    def self.get_autocomplete letters
     
-		Word.find_by_sql("
-			SELECT subject FROM words 
-			WHERE subject LIKE '#{letters}%'
-			LIMIT 20
-			")
-		
+		Word.where('lower(subject) ~* ?', letters.downcase).limit(20)
+ 
     end
   
   
   	def self.get_subject_record subject
 	
-		Word.where(:subject => subject).first
+		Word.where('lower(subject) = ?', subject.downcase).first
 	
 	end
 
@@ -49,9 +40,9 @@ class Word < ActiveRecord::Base
 			FROM word_links AS t1
 			JOIN words AS t2 ON t1.subject_id = t2.id
 			WHERE t1.list_id = '#{subject_id}'
-			AND t2.syllables REGEXP '#{syllables}'
-			AND t2.subject REGEXP '^#{begins}.*'
-			AND t2.subject REGEXP '.*#{ends}$'
+			AND t2.syllables::text ~ '#{syllables}'
+			AND t2.subject ~* '^#{begins}'
+			AND t2.subject ~* '#{ends}$'
 			ORDER BY t2.subject ASC
 			")
 	end
@@ -62,7 +53,7 @@ class Word < ActiveRecord::Base
 			SELECT DISTINCT t2.subject
 			FROM word_links AS t1
 			JOIN words AS t2 ON t1.list_id = t2.id
-			WHERE t2.subject LIKE '#{letters}%'
+			WHERE t2.subject ~* '^#{letters}'
 			")
 	end
   

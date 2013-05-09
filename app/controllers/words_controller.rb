@@ -35,30 +35,35 @@ class WordsController < ApplicationController
 	def search
 
 		@default_subject = "Bird"
-		@syllables = ".*"
-		@begins = ".*"
-		@ends = ".*"
+		@syllables = "."
+		@begins = "."
+		@ends = "."
 		
-		if params['subject']
+		
+		if params[:subject]
 
-			@search_subject = Word.get_subject_record params['subject']
+			@search_subject = Word.get_subject_record params[:subject]
 			
-			unless params['syllables'] == '' or  params['syllables'].nil? # if no. of syllables given, replace default value
-				@syllables = params['syllables']
+			unless @search_subject
+				return redirect_to words_search_path, :notice => "Not found! Sorry"
+			end
+			
+			unless params[:syllables] == '' or  params[:syllables].nil? # if no. of syllables given, replace default value
+				@syllables = params[:syllables]
 			end
 
-			unless params['begins'] == '' or  params['begins'].nil? # if no. of syllables given, replace default value
-				@begins = params['begins']
+			unless params[:begins] == '' or  params[:begins].nil? # if no. of syllables given, replace default value
+				@begins = params[:begins]
 			end
 
-			unless params['ends'] == '' or  params['ends'].nil? # if no. of syllables given, replace default value
-				@ends = params['ends']
+			unless params[:ends] == '' or  params[:ends].nil? # if no. of syllables given, replace default value
+				@ends = params[:ends]
 			end
 			
 			@list_info = Word.get_lists @search_subject.id
 			
-			@list_info.each do |i| # if the search term is the same a list, have list be the first one shown
-				if i.list_name.downcase == params['subject'].downcase
+			@list_info.each do |i| # if the search term is the same as list, have list be the first one shown
+				if i.list_name.downcase == params[:subject].downcase
 					@match_found  = "match was found"
 					@current_list_id = i.list_id
 					@current_list_name = i.list_name

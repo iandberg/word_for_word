@@ -13,6 +13,5 @@
 	%h1 Find words associated with:
 	%form{:id => 'live_search', :method => 'get', :action => words_search_path}
 		%input{:id => 'search_input', :name => 'subject', :type => 'text'}
-		%input{:name => 'syllables', :value => '', :type => 'hidden'}
 		%button{:type => 'submit', :value => 'Go'}Go
 	#home_search_results
